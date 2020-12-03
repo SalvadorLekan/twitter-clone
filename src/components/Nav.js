@@ -19,7 +19,7 @@ function Nav() {
           <RiTwitterFill className="text-4xl" />
         </EmoVG>
         <ul className="list-none pr-0">
-          <NavItems Icon={RiHome7Fill} name="Home" />
+          <NavItems Icon={RiHome7Fill} name="Home" isActive={true} />
           <NavItems Icon={FiHash} name="Explore" />
           <NavItems Icon={RiNotification2Line} name="Notifications" />
           <NavItems Icon={FiMail} name="Messages" />
@@ -31,7 +31,7 @@ function Nav() {
         <button
           type="submit"
           disabled
-          className="bg-blue-500 w-full hover:bg-blue-600 hidden lg:block text-white py-3 my-3 rounded-full font-semibold ml-2"
+          className="bg-blue-500 w-3/4 hover:bg-blue-600 hidden lg:block text-white py-3 my-3 rounded-full font-semibold"
         >
           Tweet
         </button>

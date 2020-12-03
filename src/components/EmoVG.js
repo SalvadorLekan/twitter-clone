@@ -1,8 +1,10 @@
 import React from "react";
 
-function EmoVG({ children }) {
+function EmoVG({ children, color = "blue" }) {
   return (
-    <div className="inline-block text-blue-500 hover:bg-blue-100 rounded-full p-2">
+    <div
+      className={`inline-block text-${color}-500 hover:bg-${color}-100 rounded-full p-2`}
+    >
       {children}
     </div>
   );

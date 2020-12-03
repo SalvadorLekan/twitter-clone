@@ -60,7 +60,7 @@ function Compose() {
         onClick={() => setClose(true)}
         className={`${
           close ? "hidden" : "flex"
-        } justify-center items-center w-screen h-screen bg-transparent fixed top-0`}
+        } justify-center items-center w-screen h-screen bg-transparent fixed top-0 z-50`}
       >
         <Picker onEmojiClick={onEmojiClick} />
       </div>

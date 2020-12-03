@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiDotsHorizontal, BiMessageRounded } from "react-icons/bi";
-import { AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai";
 import { BsUpload } from "react-icons/bs";
 import EmoVG from "./EmoVG";
 
 function Tweet({ time, talk }) {
+  const [liked, setliked] = useState(false);
+  const [retweeted, setretweeted] = useState(false);
   return (
     <div className="shadow flex p-2 items-start">
       <a href="/" className="w-12 block">
@@ -27,10 +29,33 @@ function Tweet({ time, talk }) {
         </div>
         <div className="px-2">{talk}</div>
         <div className="grid p-2 grid-cols-4 text-xl text-gray-500">
-          <BiMessageRounded />
-          <AiOutlineRetweet />
-          <AiOutlineHeart />
-          <BsUpload />
+          <div>
+            <EmoVG>
+              <BiMessageRounded />
+            </EmoVG>
+          </div>
+          <div>
+            <EmoVG color="green">
+              <AiOutlineRetweet
+                className={!retweeted && "text-gray-500"}
+                onClick={() => setretweeted((t) => !t)}
+              />
+            </EmoVG>
+          </div>
+          <div>
+            <EmoVG color="red">
+              {liked ? (
+                <AiFillHeart onClick={() => setliked(false)} />
+              ) : (
+                <AiOutlineHeart onClick={() => setliked(true)} />
+              )}
+            </EmoVG>
+          </div>
+          <div>
+            <EmoVG>
+              <BsUpload />
+            </EmoVG>
+          </div>
         </div>
       </div>
     </div>
