@@ -37,7 +37,7 @@ function Tweet({ time, talk }) {
           <div>
             <EmoVG color="green">
               <AiOutlineRetweet
-                className={!retweeted && "text-gray-500"}
+                className={retweeted ? "text-green-500" : "text-gray-500"}
                 onClick={() => setretweeted((t) => !t)}
               />
             </EmoVG>
@@ -45,9 +45,15 @@ function Tweet({ time, talk }) {
           <div>
             <EmoVG color="red">
               {liked ? (
-                <AiFillHeart onClick={() => setliked(false)} />
+                <AiFillHeart
+                  className="text-red-500"
+                  onClick={() => setliked(false)}
+                />
               ) : (
-                <AiOutlineHeart onClick={() => setliked(true)} />
+                <AiOutlineHeart
+                  className="text-red-500"
+                  onClick={() => setliked(true)}
+                />
               )}
             </EmoVG>
           </div>
