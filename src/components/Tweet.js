@@ -9,7 +9,7 @@ function Tweet({ time, talk }) {
   const [retweeted, setretweeted] = useState(false);
   return (
     <div className="shadow flex p-2 items-start">
-      <a href="/" className="w-12 block">
+      <a href="/" className="w-11 block">
         <img
           src="https://pbs.twimg.com/profile_images/1299442551058034690/8KxS7I57_400x400.jpg"
           alt="profile"
@@ -19,11 +19,11 @@ function Tweet({ time, talk }) {
       <div className="flex-grow">
         <div className="flex-grow flex justify-between w-full items-center">
           <div className="text-sm flex px-2">
-            <h4 className="flex-grow font-medium truncate">
+            <h4 className="w-20 sm:w-auto font-medium truncate sm:break-words">
               {" "}
               Salvador #EndSARS
             </h4>
-            <p className=" text-gray-900 font-light px-2">@SalvadorLekan </p>
+            <p className=" text-gray-900 font-light px-1">@SalvadorLekan </p>
             <span>{time}m</span>
           </div>
           <EmoVG>
