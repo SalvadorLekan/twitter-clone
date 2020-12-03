@@ -19,9 +19,12 @@ function Tweet({ time, talk }) {
       <div className="flex-grow">
         <div className="flex-grow flex justify-between w-full items-center">
           <div className="text-sm flex px-2">
-            <h4 className="font-medium"> Salvador #EndSARS</h4>
-            <p className="text-gray-900 font-light px-2">@SalvadorLekan </p>
-            {"  "}. {time}m
+            <h4 className="flex-grow font-medium truncate">
+              {" "}
+              Salvador #EndSARS
+            </h4>
+            <p className=" text-gray-900 font-light px-2">@SalvadorLekan </p>
+            <span>{time}m</span>
           </div>
           <EmoVG>
             <BiDotsHorizontal className="text-2xl" />
